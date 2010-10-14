@@ -5,9 +5,11 @@ License:             GPL-2
 License-file:        LICENSE
 Author:              Carl Howells
 Maintainer:          chowells79@gmail.com
+Copyright:           Carl Howells, 2010
+Homepage:            http://github.com/chowells79/nano-cryptr
 Category:            System
 Build-type:          Simple
-Cabal-version:       >=1.2
+Cabal-version:       >=1.6
 Description:
   This package wraps @glibc@'s @crypt_r@ function in a thread-safe manner.
 
