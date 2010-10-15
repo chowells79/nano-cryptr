@@ -83,9 +83,9 @@ newCryptData = do
 -- This interface avoids initializing a new 'CryptData' for each call,
 -- as is done by the 'cryptR' call
 cryptRIO :: CryptData -- ^ the 'CryptData' to use as scratch space
-        -> B.ByteString -- ^ the @key@ value as described by @crypt_r@
-        -> B.ByteString -- ^ the @salt@ value as described by @crypt_r@
-        -> IO B.ByteString -- ^ the result of the call to @crypt_r@
+         -> B.ByteString -- ^ the @key@ value as described by @crypt_r@
+         -> B.ByteString -- ^ the @salt@ value as described by @crypt_r@
+         -> IO B.ByteString -- ^ the result of the call to @crypt_r@
 cryptRIO (CD mvar) key salt = withMVar mvar (`withForeignPtr` crypt key salt)
 
 
