@@ -53,7 +53,7 @@ import Foreign.Marshal.Alloc
 data CDOpaque
 
 -- name the foreign call
-foreign import ccall unsafe "crypt_r"
+foreign import ccall safe "crypt_r"
     crypt_r :: CString-> CString -> Ptr CDOpaque -> IO CString
 
 
