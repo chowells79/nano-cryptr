@@ -45,7 +45,6 @@ import qualified Data.ByteString as B
 import Foreign
 import Foreign.C.String
 import Foreign.C.Types
-import Foreign.Marshal.Alloc
 
 #include <crypt.h>
 
@@ -67,11 +66,10 @@ instance Show CryptData where show _ = "<CryptData>"
 -- underlying data structure properly when it is garbage collected.
 newCryptData :: IO CryptData
 newCryptData = do
-    ptr <- mallocBytes #{size struct crypt_data}
-    #{poke struct crypt_data, initialized} ptr (0 :: CInt)
-    fptr <- newForeignPtr finalizerFree ptr
-    mvar <- newMVar fptr
-    return $ CD mvar
+    fptr <- mallocForeignPtrBytes #{size struct crypt_data}
+    withForeignPtr fptr $ \ptr ->
+        #{poke struct crypt_data, initialized} ptr (0 :: CInt)
+    fmap CD $ newMVar fptr
 
 
 -- | This is a thread-safe interface to the functionality provided by
