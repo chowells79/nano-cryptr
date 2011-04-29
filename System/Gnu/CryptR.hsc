@@ -11,7 +11,7 @@
 -- Prelude> :m + System.Gnu.CryptR Data.ByteString.Char8
 -- Prelude System.Gnu.CryptR Data.ByteString.Char8> 'cryptR' \"password\" \"l3\"
 -- Loading package bytestring-0.9.1.7 ... linking ... done.
--- Loading package nano-cryptr-0.1 ... linking ... done.
+-- Loading package nano-cryptr-0.1.1.1 ... linking ... done.
 -- \"l3vmImyenGFYg\"
 -- Prelude System.Gnu.CryptR Data.ByteString.Char8> 'cryptR' \"password1\" \"l3vmImyenGFYg\"
 -- \"l3vmImyenGFYg\"
