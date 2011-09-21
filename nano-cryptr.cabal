@@ -1,7 +1,7 @@
 Name:                nano-cryptr
-Version:             0.1.1.1
+Version:             0.1.1.2
 Synopsis:            A threadsafe binding to glibc's crypt_r function
-License:             GPL-2
+License:             BSD3
 License-file:        LICENSE
 Author:              Carl Howells
 Maintainer:          chowells79@gmail.com
