@@ -15,7 +15,7 @@ Description:
 
 Library
   Exposed-modules:     System.Gnu.CryptR
-  Build-depends:       base == 4.*, bytestring == 0.9.*
+  Build-depends:       base == 4.*, bytestring >= 0.9.1 && < 0.11
   ghc-options:         -Wall
   Build-tools:         hsc2hs
   cc-options:          -D_GNU_SOURCE
