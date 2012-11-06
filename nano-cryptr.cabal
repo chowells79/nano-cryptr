@@ -1,5 +1,5 @@
 Name:                nano-cryptr
-Version:             0.1.1.2
+Version:             0.1.1.3
 Synopsis:            A threadsafe binding to glibc's crypt_r function
 License:             BSD3
 License-file:        LICENSE
@@ -20,3 +20,8 @@ Library
   Build-tools:         hsc2hs
   cc-options:          -D_GNU_SOURCE
   extra-libraries:     crypt
+
+Source-repository this
+  type:              git
+  location:          https://github.com/chowells79/nano-cryptr.git
+  tag:               0.1.1.3
