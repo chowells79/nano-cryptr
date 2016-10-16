@@ -46,6 +46,8 @@ import Foreign
 import Foreign.C.String
 import Foreign.C.Types
 
+import System.IO.Unsafe
+
 #include <crypt.h>
 
 -- An empty data type to represent the c struct crypt_data
